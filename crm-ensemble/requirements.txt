@@ -1,6 +1,6 @@
 pandas
 numpy
-Django==5.0.8
+Django==5.0.13
 psycopg2-binary
 djangorestframework
 django-filter
