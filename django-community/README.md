@@ -1,1 +1,0 @@
-## Social Networking Sites with Django
