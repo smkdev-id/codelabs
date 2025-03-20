@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "properties": {
+        "result": {
+            "type": "object",
+            "properties": {
+                "gender": { "type": "string", "enum": ["Pria", "Wanita"]},
+                "phone_number": { "type": "string", "pattern": "^wa\\.me\\/\\d+$" },
+                "email": { "type": "string", "format": "email" },
+                "linkedin": { "type": "string", "pattern": "^https:\\/\\/linkedin\\.com\\/in\\/.*$" },
+                "role": { "type": "string" },
+                "name": { "type": "string" },
+                "about": { "type": "string"},
+                "educations": { "type": "string" },
+                "skills": { "type": "string" },
+                "portfolio": { "type": "string" },
+                "work_experiences": { "type": "string" }
+            },
+            "required": ["gender", "phone_number", "email", "linkedin", "role", "name", "about", "educations", "skills", "portfolio", "work_experiences"]
+        }
+    },
+    "required": ["result"]
+}

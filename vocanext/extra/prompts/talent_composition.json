@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "result": {
+            "type": "object",
+            "properties": {
+                "name": { "type": "string" },
+                "email": { "type": "string", "format": "email" },
+                "expected_role": { "type": "string" },
+                "matched_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+                "educations": { "type": "string" },
+                "work_experiences": { "type": "string" },
+                "tech_skills": { "type": "string" },
+                "soft_skills": { "type": "string" },
+                "whatsapp_number": { "type": "string", "pattern": "^wa\\.me\\/\\d+$" },
+                "linkedin": { "type": "string", "pattern": "^https:\\/\\/linkedin\\.com\\/in\\/.*$" }
+            },
+            "required": ["name", "email", "expected_role", "matched_score", "educations", "work_experiences", "tech_skills", "soft_skills", "whatsapp_number", "linkedin"]
+        }
+    },
+    "required": ["result"]
+}

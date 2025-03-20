@@ -1,0 +1,47 @@
+{
+    "type": "object",
+    "properties": {
+        "result": {
+            "type": "object",
+            "properties": {
+                "email": { "type": "string", "format": "email" },
+                "name": { "type": "string" },
+                "age": { "type": "integer", "minimum": 0, "maximum": 60 },
+                "gender": { "type": "string", "enum": ["Male", "Female"]},
+                "summary": {
+                    "type": "object",
+                    "properties": {
+                        "year_experiences": { "type": "integer" },
+                        "work_experiences": { "type": "string" },
+                        "tech_skills": { "type": "string" },
+                        "soft_skills": { "type": "string" },
+                        "educations": { "type": "string" },
+                        "certifications": { "type": "string" },
+                        "portfolio": { "type": "string" }
+                    },
+                    "required": ["year_experiences", "work_experiences", "tech_skills", "soft_skills", "educations", "certifications", "portfolio"]
+                },
+                "evaluation": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "expected_role": { "type": "string" },
+                            "matched_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+                            "matched_status": { "type": "string" },
+                            "reason": { "type": "string" }
+                        },
+                        "required": ["expected_role", "matched_score", "matched_status", "reason"]
+                    }
+                },
+                "address": { "type": "string" },
+                "phone_number": { "type": "string", "pattern": "^wa\\.me\\/\\d+$" },
+                "curriculum_vitae": { "type": "string"},
+                "linkedin": { "type": "string", "pattern": "^https:\\/\\/linkedin\\.com\\/in\\/.*$" },
+                "github_gitlab": { "type": "string", "pattern": "^https:\\/\\/github\\.com\\/.*$|^https:\\/\\/gitlab\\.com\\/.*$" }
+            },
+            "required": ["email", "name", "age", "gender", "summary", "evaluation", "address", "phone_number", "curriculum_vitae", "linkedin", "github_gitlab"]
+        }
+    },
+    "required": ["result"]
+}
