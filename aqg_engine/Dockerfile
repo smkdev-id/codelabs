@@ -1,1 +1,0 @@
-FROM 3.12-alpine
